@@ -16,7 +16,7 @@ docker pull jiwidi/jupyter-lab-rpi:latest
 
 ### Running the image
 ```python
-docker run -dp 8888:8888 jiwidi/jupyter-lab-rpi:latesh 
+docker run -dp 8888:8888 jiwidi/jupyter-lab-rpi:latest
 ```
 The jupyter lab server should be accesible at  `http://<docker host IP address>:8888` and protected with a password `jns`
 
