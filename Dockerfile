@@ -6,7 +6,7 @@
 # Originally from: https://github.com/mkjiang/rpi-jupyter/blob/master/Dockerfile and https://github.com/kidig/rpi-jupyter-lab/blob/master/Dockerfile
 #
 
-FROM resin/raspberrypi3-python:3.6
+FROM balenalib/raspberry-pi-python:3.6-20200207
 MAINTAINER Jaime Ferrando Huertas <fhjaime96@gmail.com>
 
 WORKDIR /root
@@ -18,6 +18,8 @@ RUN apt-get install -y libzmq-dev
 RUN apt-get install -y libfreetype6-dev 
 RUN apt-get install -y libpng-dev
 RUN apt-get install -y python-dev --fix-missing 
+RUN apt-get install -y patch
+RUN apt-get install -y build-essential
 
 RUN pip3 install --upgrade pip
 RUN pip3 install cython
