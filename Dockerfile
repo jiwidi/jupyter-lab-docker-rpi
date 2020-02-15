@@ -12,8 +12,12 @@ MAINTAINER Jaime Ferrando Huertas <fhjaime96@gmail.com>
 WORKDIR /root
 
 # Update pip and install jupyter
-RUN apt-get update && apt-get install -y libncurses5-dev libzmq-dev libfreetype6-dev libpng-dev
-RUN apt-get install python-dev --fix-missing 
+RUN apt-get update 
+RUN apt-get install -y libncurses5-dev 
+RUN apt-get install -y libzmq-dev 
+RUN apt-get install -y libfreetype6-dev 
+RUN apt-get install -y libpng-dev
+RUN apt-get install -y python-dev --fix-missing 
 
 RUN pip3 install --upgrade pip
 RUN pip3 install cython
