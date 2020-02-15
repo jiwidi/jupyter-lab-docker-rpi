@@ -11,7 +11,7 @@ The dockerfile starts a minimal notebook server with [resin/rpi-raspbian:jessie]
 
 ### Installing
 ```python
-docker pull jiwidi/jupyter-lab-rpi:latesh
+docker pull jiwidi/jupyter-lab-rpi:latest
 ```
 
 ### Running the image
