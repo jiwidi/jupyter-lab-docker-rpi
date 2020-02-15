@@ -13,8 +13,10 @@ WORKDIR /root
 
 # Update pip and install jupyter
 RUN apt-get update && apt-get install -y libncurses5-dev libzmq-dev libfreetype6-dev libpng-dev
+RUN apt-get install python-dev --fix-missing 
 
 RUN pip3 install --upgrade pip
+RUN pip3 install cython
 RUN pip3 install readline ipywidgets jupyter jupyterlab
 
 
@@ -25,7 +27,7 @@ RUN jupyter notebook --generate-config
 RUN mkdir notebooks
 RUN sed -i "/c.NotebookApp.open_browser/c c.NotebookApp.open_browser = False" /root/.jupyter/jupyter_notebook_config.py \
         && sed -i "/c.NotebookApp.ip/c c.NotebookApp.ip = '*'" /root/.jupyter/jupyter_notebook_config.py \
-        && sed -i "/c.NotebookApp.notebook_dir/c c.NotebookApp.notebook_dir = '/root/notebooks'" /root/.jupyter/jupyter_notebook_config.py \ 
+        && sed -i "/c.NotebookApp.notebook_dir/c c.NotebookApp.notebook_dir = '/root'" /root/.jupyter/jupyter_notebook_config.py \ 
         && sed -i "/c.NotebookApp.password/c c.NotebookApp.password = 'sha1:5815fb7ca805:f09ed218dfcc908acb3e29c3b697079fea37486a'" /root/.jupyter/jupyter_notebook_config.py
 
 VOLUME /root/notebooks
