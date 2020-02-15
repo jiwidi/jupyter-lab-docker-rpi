@@ -32,3 +32,7 @@ And then execute:
 jupyter notebook password
 ```
 You can also edit the config file `/root/.jupyter/jupyter_notebook_config.py` with any config you like!
+
+### Useful repos for running jupyterlab on rpis
+
+https://github.com/kleinee/jns
