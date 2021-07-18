@@ -1,3 +1,8 @@
+# DISCLAIMER:
+The jupyter team now has official images for arm64 
+* https://github.com/jupyter/docker-stacks/issues/1019 
+* https://github.com/jupyter/docker-stacks/pull/1399
+
 # jupyter-lab-docker-rpi
 A Docker image to run jupyterlab on your raspberry pi. Tested on rpi3b and rpi4 with raspian.
 
